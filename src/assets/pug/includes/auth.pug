@@ -1,0 +1,23 @@
+section.section-auth
+  .auth
+    .auth-body
+      form.auth-form
+        .auth__title Для получения доступа к разделам личного кабинета, войдите:
+        .auth-form-inner
+          label(for="").auth-form__label Логин
+          .auth-form__input-wrap
+            input(placeholder="Введите свой логин" type="text").auth-form__input
+          label(for="").auth-form__label Пароль
+          .auth-form__input-wrap
+            input(placeholder="Введите пароль" type="password").auth-form__input
+          .auth-form__submit ВОЙТИ
+          a(href="#").auth-form__link Забыли свой пароль?
+      .auth-blocks
+        a(href="#").brick-el.auth-brick-el
+          .brick-el__img.auth-brick__img
+            img(src="./assets/img/icons/doc-check.png", alt="")
+          .brick-el__title.auth-brick__title Проверка подлинности сертификата качества
+        a(href="#").brick-el.auth-brick-el
+          .brick-el__img.auth-brick__img
+            img(src="./assets/img/icons/calc.png", alt="")
+          .brick-el__title.auth-brick__title Расчёт параметров труб для нефтегазопроводов

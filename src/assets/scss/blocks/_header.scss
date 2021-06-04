@@ -1,0 +1,52 @@
+.header {
+    &-container {
+        padding: 20px;
+        background: #F5F5F5;
+    }
+    &-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        color: #302E2C;
+    }
+    &-lang {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        &__item {
+            display: block;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            color: #BDBBBC;
+            cursor: pointer;
+            text-decoration: none;
+            &--active {
+                color: #302E2C;
+                font-weight: normal;
+            }
+        }
+        &__item:first-child {
+            margin-right: 15px;
+        }
+    }
+    &-auth {
+        display: flex;
+        align-items: center;
+        &__text {
+            font-weight: bold;
+            font-size: 16px;
+            color: #302E2C;
+        }
+    }
+    &-user {
+        &__img {
+            margin-right: 10px;
+        }
+    }
+}

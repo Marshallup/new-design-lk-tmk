@@ -1,0 +1,22 @@
+.breadcrumps {
+  margin-top: 20px;
+  &-body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-right: 10px;
+    color: #EE732C;
+    font-size: 14px;
+    cursor: pointer;
+    &--current {
+      cursor: default;
+      color: #BDBBBC;
+    }
+  }
+  &__arrow {
+    cursor: default;
+    color: #BDBBBC;
+  }
+}

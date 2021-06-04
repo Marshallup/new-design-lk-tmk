@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 10px;
+  &-body {
+    padding: 17px;
+    background: #302E2C;
+  }
+  &__text {
+    text-align: center;
+    color: #FFFFFF;
+    a {
+      color: white;
+    }
+  }
+}

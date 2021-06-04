@@ -1,0 +1,85 @@
+.auth {
+  margin-bottom: 97px;
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__title {
+  font-size: 16px;
+  color: #302E2C;
+  margin-bottom: 20px;
+  font-weight: 500;
+  }
+  &-form {
+    flex-basis: 50%;
+    &-inner {
+      margin-top: 38px;
+    }
+    &__label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    &__input {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #BDBBBC;
+      border-radius: 3px;
+      padding-left: 16px;
+      &::placeholder {
+        font-size: 14px;
+        color: #BDBBBC;
+      }
+      &-wrap {
+        max-width: 394px;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+    }
+    &__submit {
+      max-width: 394px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background: #EE732C;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #FFFFFF;
+    }
+    &__link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      text-decoration-line: underline;
+      color: #EE732C;
+    }
+  }
+  &-blocks {
+    flex-basis: 50%;
+    margin-top: 20px;
+  }
+  &-brick {
+    &-el {
+      text-decoration: none;
+      cursor: pointer;
+      padding: 35px 20px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__img {
+      width: 70px;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 20px;
+      color: #302E2C;
+    }
+  }
+}
