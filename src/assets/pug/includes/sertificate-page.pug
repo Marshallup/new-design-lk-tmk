@@ -1,0 +1,37 @@
+.sertificate
+  .sertificate-cell
+    .sertificate__title Проверка подлинности сертификата качества
+    form.sertificate-form
+      .sertificate-form-item
+        .sertificate-form__label Номер сертификата<sup>*</sup>
+        .sertificate-form-input-wrap
+          input(placeholder="Введите номер сертификата" type="text").sertificate-form-input
+      .sertificate-form-item-two
+        .sertificate-form-item
+          .sertificate-form__label Дата выдачи сертификата
+          .sertificate-form-input-wrap.sertificate-form-input-date
+            input(type="text" autocomplete="off")#datetimepicker.sertificate-form-input
+        .sertificate-form-item
+          .sertificate-form__label Завод, выдавший СК
+          .sertificate-form-input-wrap
+            select.sertificate-form-select
+              option(value="w") КАЗ-ТП
+      .sertificate-form-item
+        .sertificate-form__label Проверочный код (указан на сертификате снизу)
+        .sertificate-form-input-wrap
+          input(placeholder="Введите проверочный код" type="text").sertificate-form-input
+      .sertificate-form-item-two
+        .sertificate-form-item
+          .sertificate-form-text CAPCHA
+        .sertificate-form-item
+          .sertificate-form-input-wrap
+            input(type="text").sertificate-form-input
+      button.sertificate-form__submit Просмотр сертификата
+  .sertificate-cell
+    .sertificate__title Пример заполнения полей для проверки подлинности
+    .sertificate__links
+      .sertificate__link-wrap
+        a(href="#").sertificate__link Ввод данных из сертификата качества
+      .sertificate__link-wrap
+        a(href="#").sertificate__link Ввод данных из Ж/Д накладной
+          

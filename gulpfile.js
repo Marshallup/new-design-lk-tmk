@@ -58,6 +58,7 @@ const path = {
   watch: {
     html: "src/assets/**/*.pug",
     js: "src/assets/js/**/*.js",
+    apart: "./src/assets/js/apart/*.js",
     css: "src/assets/scss/**/*.scss",
     fonts: "src/assets/fonts/*.*",
     images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
@@ -240,6 +241,7 @@ task("watch", () => {
   watch(path.watch.css, series("styles"));
   watch(path.watch.fonts, series("fonts"));
   watch(path.watch.js, series("js"));
+  watch(path.watch.apart, series("apart"));
   watch(path.watch.images, series("images"));
   watch(path.watch.html, series("html"));
 });

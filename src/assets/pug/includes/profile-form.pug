@@ -1,0 +1,31 @@
+.profile
+  .profile__title.profile__title-top Профиль пользователя
+  .profile-info
+    .profile-info-block
+      .profile-info-block-item.profile-info-block-item--bigger
+        .profile-info__type Логин:
+        .profile-info__title IvanIvanov
+      .profile-info-block-item.profile-info-block-item--bigger
+        .profile-info__type E-mail:
+        .profile-info__title ivan@mail.ru
+    .profile-info-block
+      .profile-info-block-item
+        .profile-info__type Фамилия:
+        .profile-info__title Иванов
+      .profile-info-block-item
+        .profile-info__type Имя:
+        .profile-info__title Иван
+      .profile-info-block-item
+        .profile-info__type Отчество:
+        .profile-info__title Иванович
+  .profile__title.profile__title-bot Смена пароля
+  form.profile-form
+    .profile-form-item
+      label(for="").profile-form__label Новый пароль
+      input.profile-form__input(type="text")
+    .profile-form-item
+      label(for="").profile-form__label Повторите пароль
+      input.profile-form__input(type="text")
+    .profile-form-item
+      button.profile-form__submit Сохранить
+    

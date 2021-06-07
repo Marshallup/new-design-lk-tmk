@@ -41,7 +41,10 @@ input:-webkit-autofill:active {
     font-family: 'PF-DinText-Cond-Pro';
   }
   &-content {
-    min-height: calc(100vh - 62px);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    // min-height: calc(100vh - 62px);
   }
 
 }

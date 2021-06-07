@@ -1,0 +1,148 @@
+.sertificate {
+  margin-bottom: 20px;
+  display: flex;
+  &-cell {
+    flex-basis: 50%;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #302E2C;
+    margin-bottom: 20px;
+  }
+  &-form {
+    max-width: 394px;
+    &__label {
+      font-weight: 500;
+      font-size: 15px;
+      color: #302E2C;
+      margin-bottom: 5px;
+      sup {
+        color: red;
+      }
+    }
+    &-input {
+      border: 1px solid #BDBBBC;
+      border-radius: 3px;
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding-left: 15px;
+      &::placeholder {
+        font-size: 14px;
+        color: #BDBBBC;
+      }
+      &-wrap {
+        width: 100%;
+        height: 50px;
+      }
+      &-date {
+        position: relative;
+        &:before {
+          display: block;
+          content: '';
+          background: url('../img/icons/calendar.png') center center/contain no-repeat;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 15px;
+        }
+      }
+    }
+    &-item {
+      margin-bottom: 20px;
+      &-two {
+        display: flex;
+        justify-content: space-between;
+        .sertificate-form-item {
+          flex-basis: 50%;
+          max-width: 182px;
+        }
+      }
+    }
+    &-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #BDBBBC;
+      border-radius: 3px;
+      height: 100%;
+      height: 50px;
+    }
+    &__submit {
+      padding: 12px;
+      background: #EE732C;
+      border-radius: 3px;
+      width: 100%;
+      font-weight: bold;
+      font-size: 20px;
+      color: #FFFFFF;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  &__links {
+    margin-top: 30px;
+  }
+  &__link {
+    font-size: 16px;
+    color: #EE732C;
+    text-decoration: none;
+    &-wrap {
+      margin-bottom: 10px;
+    }
+  }
+  .select2-container {
+    height: 100%;
+    .select2-selection {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .select2-selection__arrow {
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 13px;
+      // background: url('../img/icons/arrow-input.png') center center/contain no-repeat;
+      b {
+        top: 1px;
+        width: 10px;
+        height: 13px;
+        display: block;
+        border: none;
+        background: url('../img/icons/arrow-input.png') center center/contain no-repeat;
+      }
+    }
+  }
+  @media screen and (max-width: 855px) {
+    flex-wrap: wrap;
+    &-cell {
+      flex-basis: 100%;
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+    &__title {
+      text-align: center;
+    }
+    &-form {
+      margin: 0 auto;
+    }
+    &__links {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .sertificate-form-item-two {
+      flex-wrap: wrap;
+      .sertificate-form-item {
+        max-width: none;
+        flex-basis: 100%;
+      }
+    }
+  }
+}

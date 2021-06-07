@@ -1,4 +1,7 @@
 .header {
+    &__logo {
+        text-decoration: none;
+    }
     &-container {
         padding: 20px;
         background: #F5F5F5;
@@ -13,6 +16,70 @@
         font-weight: bold;
         font-size: 40px;
         color: #302E2C;
+        text-decoration: none;
+    }
+    &-type {
+        position: relative;
+        text-align: center;
+        &__current {
+            text-align: center;
+            font-size: 20px;
+            color: #302E2C;
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+            cursor: pointer;
+            user-select: none;
+            &--show {
+                .header-type__arrow {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        &__arrow {
+            width: 10px;
+            height: 10px;
+            background: url('../img/icons/arrow-bot.png') center center/contain no-repeat;
+            position: absolute;
+            top: 4px;
+            right: -20px;
+            transition: transform .3s ease;
+        }
+        &-list {
+            padding: 7px 15px 7px 10px !important;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 10px);
+            list-style-type: none;
+            top: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-height: 77px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            background: white;
+            transition: all .3s ease-in-out;
+            &--show {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &__item {
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__link {
+            text-decoration: none;
+            white-space: nowrap;
+            color: #302E2C;
+            transition: all .3s ease;
+            &:hover {
+                color: #EE732C;
+            }
+        }
     }
     &-lang {
         display: flex;
@@ -42,11 +109,67 @@
             font-weight: bold;
             font-size: 16px;
             color: #302E2C;
+            cursor: pointer;
+        }
+        &__logOut {
+            cursor: pointer;
+            margin-left: 10px;
         }
     }
     &-user {
         &__img {
+            cursor: pointer;
             margin-right: 10px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__title {
+            font-size: 34px;
+        }
+        &__logo img {
+            max-width: 170px;
+        }
+    }
+    @media screen and (max-width: 630px) {
+        &-body {
+            flex-wrap: wrap;
+        }
+        &__logo {
+            width: 100%;
+            margin-bottom: 20px;
+            img {
+                margin: 0 auto;
+            }
+        }
+        &-center {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-lang {
+            margin-bottom: 5px;
+        }
+        &-auth {
+            justify-content: flex-end;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        &__logo {
+            img {
+                max-width: 140px;
+            }
+        }
+        &__title {
+            font-size: 29px;
+        }
+        &-lang {
+            justify-content: center;
+        }
+        &-auth {
+            justify-content: center;
         }
     }
 }

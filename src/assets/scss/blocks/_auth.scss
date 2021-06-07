@@ -27,6 +27,7 @@
       border: 1px solid #BDBBBC;
       border-radius: 3px;
       padding-left: 16px;
+      outline: none;
       &::placeholder {
         font-size: 14px;
         color: #BDBBBC;
@@ -48,6 +49,9 @@
       font-weight: bold;
       font-size: 20px;
       color: #FFFFFF;
+      outline: none;
+      cursor: pointer;
+      border: none;
     }
     &__link {
       display: inline-block;
@@ -81,5 +85,45 @@
       font-size: 20px;
       color: #302E2C;
     }
+  }
+  @media screen and (max-width: 975px) {
+    // &-body {
+    //   flex-wrap: wrap;
+    // }
+    &-form {
+      margin-right: 15px;
+      // flex-basis: 100%;
+    }
+    &-brick {
+      &__img {
+        margin-right: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 30px;
+    &-body {
+      flex-wrap: wrap;
+    }
+    &-form {
+      margin-right: 0;
+      flex-basis: 100%;
+      &-inner {
+        margin-top: 10px;
+      }
+    }
+    &-blocks {
+      flex-basis: 100%;
+    }
+    &-brick {
+      &__title {
+          font-size: 16px;
+      }
+  }
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-main {
+    padding-top: 20px;
   }
 }

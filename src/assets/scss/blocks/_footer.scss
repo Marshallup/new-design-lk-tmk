@@ -1,6 +1,9 @@
 .footer {
   margin-top: 10px;
-  &-body {
+  &-wrap {
+    margin-top: auto;
+  }
+  &-container {
     padding: 17px;
     background: #302E2C;
   }
