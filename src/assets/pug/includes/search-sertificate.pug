@@ -3,17 +3,20 @@
   form.sertificates-form
     .sertificates-form-item
       label.sertificates-form-item__label Завод, выдавший СК
-      select.sertificates-form-item__input--style.sertificates-form-item__select(name="2")
-        option(value="2") 2
+      .sertificates-form-item__select
+        select#factory-sertificate(name="2")
+          option(value="2") Без ограничений
     .sertificates-form-item-two
-      .sertificates-form-item
+      .sertificates-form-item.sertificates-form-item--date
         label.sertificates-form-item__label Дата выдачи с:
         .sertificates-form-item__input-time-wrap
-          input.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
-      .sertificates-form-item
+          input#date-issue-start.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
+      .sertificates-form-item.sertificates-form-item--date
         label.sertificates-form-item__label Дата выдачи по:
         .sertificates-form-item__input-time-wrap
-          input.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          input#date-issue-end.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
     .sertificates-form-item-two--long
       .sertificates-form-item
         label.sertificates-form-item__label Номер сертификата
@@ -22,20 +25,98 @@
         label.sertificates-form-item__label Номер транспортного средства
         input.sertificates-form-item__input.sertificates-form-item__input--style(type="text" placeholder="Введите номер транспортного средства")
     .sertificates-form-item-two
-      .sertificates-form-item
+      .sertificates-form-item.sertificates-form-item--date
         label.sertificates-form-item__label Дата создания с:
         .sertificates-form-item__input-time-wrap
-          input.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
-      .sertificates-form-item
+          input#date-create-start.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
+      .sertificates-form-item.sertificates-form-item--date
         label.sertificates-form-item__label Дата создания по:
         .sertificates-form-item__input-time-wrap
-          input.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          input#date-create-end.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
     .sertificates-form-item-two
-      .sertificates-form-item
+      .sertificates-form-item.sertificates-form-item--date
         label.sertificates-form-item__label Дата изменения с:
         .sertificates-form-item__input-time-wrap
-          input.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
-      .sertificates-form-item
+          input#date-change-start.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
+      .sertificates-form-item.sertificates-form-item--date
         label.sertificates-form-item__label Дата изменения по:
         .sertificates-form-item__input-time-wrap
-          input.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          input#date-change-end.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
+    .sertificates-form-item-two--long
+      .sertificates-form-item
+        label.sertificates-form-item__label Номер контракта
+        input.sertificates-form-item__input.sertificates-form-item__input--style(type="text" placeholder="Введите номер контракта")
+      .sertificates-form-item.sertificates-form-item--date
+        label.sertificates-form-item__label Дата контракта
+        .sertificates-form-item__input-time-wrap
+          input#date-contract.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
+    .sertificates-form-item-two--long
+      .sertificates-form-item
+        label.sertificates-form-item__label Номер спецификации
+        input.sertificates-form-item__input.sertificates-form-item__input--style(type="text" placeholder="Введите номер спецификации")
+      .sertificates-form-item.sertificates-form-item--date
+        label.sertificates-form-item__label Дата спецификации
+        .sertificates-form-item__input-time-wrap
+          input#date-spec.sertificates-form-item__input.sertificates-form-item__input--style(type="text")
+          .sertificates-form-item__input-time__icon
+    .sertificates-form-checkbox
+      label.sertificates-form-checkbox-item
+        .sertificates-form-checkbox-item__check
+          input(type="checkbox")
+          span
+        .sertificates-form-checkbox-item__title С зависимыми сертификатами
+    .sertificates-form-btns
+      button(type="button").sertificates-form__btn.sertificates-form__btn--update
+        .sertificates-form__update-icon
+        .sertificates-form__update-text Обновить данные
+      button(type="button").sertificates-form__btn.sertificates-form__btn--exel
+        .sertificates-form__exel-icon
+        .sertificates-form__exel-text Скачать в формате Excel
+  .sertificates-compress
+    .sertificates-form-checkbox.sertificates-compress-checkbox
+      label.sertificates-form-checkbox-item
+        .sertificates-form-checkbox-item__check
+          input(type="checkbox")
+          span
+        .sertificates-form-checkbox-item__title.sertificates-form-checkbox-item__title--compress Изменить параметры сжатия
+    .sertificates-compress-filter
+      .sertificates-compress-filter-item
+        .sertificates-form-checkbox
+          label.sertificates-form-checkbox-item
+            .sertificates-form-checkbox-item__check
+              input(name="type" type="radio")
+              span
+            .sertificates-form-checkbox-item__title.sertificates-form-checkbox-item__title--compress Цветные
+        .sertificates-form-checkbox
+          label.sertificates-form-checkbox-item
+            .sertificates-form-checkbox-item__check
+              input(name="type" type="radio")
+              span
+            .sertificates-form-checkbox-item__title.sertificates-form-checkbox-item__title--compress Чёрно-белые
+      .sertificates-compress-filter-item.sertificates-compress-filter-item--options
+        label.sertificates-compress-filter-item__label Качество:
+        input(type="text" placeholder="80").sertificates-compress-filter-item__input
+        span.sertificates-compress-filter-item__text (1-100 единиц)
+      .sertificates-compress-filter-item.sertificates-compress-filter-item--options
+        label.sertificates-compress-filter-item__label Масштаб:
+        input(type="text" placeholder="1500").sertificates-compress-filter-item__input
+        span.sertificates-compress-filter-item__text (1000-3000 пикс)
+      .sertificates-compress-filter-item.sertificates-compress-filter-item--options
+        label.sertificates-compress-filter-item__label Расширение:
+        input(type="text" placeholder="200").sertificates-compress-filter-item__input
+        span.sertificates-compress-filter-item__text (200-300 тчк/дюйм)
+    a(href="#").sertificates-compress-link
+      .sertificates-compress-link__img
+      .sertificates-compress-link__text Скачать архив
+  .sertificates-table-wrap
+    .sertificates-table-count
+      .sertificates-table-count__title Строк на странице:
+      select#table-count.sertificates-table-count__select(name="e")
+        option(value="1") 1
+        option(value="2") 2
+    #sertificates-table.sertificates-table
