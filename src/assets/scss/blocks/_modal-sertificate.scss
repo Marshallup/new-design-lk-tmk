@@ -1,0 +1,180 @@
+.modal {
+  &-wrapper {
+    display: none;
+  }
+  &-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &-inner {
+    position: relative;
+    width: 660px;
+    max-width: 100%;
+    padding: 30px 16px 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(48, 46, 44, 0.2);
+    border-radius: 5px;
+  }
+  &-attach {
+    &__title {
+      font-weight: bold;
+      font-size: 20px;
+      color: #302E2C;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__close {
+      width: 24px;
+      height: 24px;
+      top: 10px;
+      right: 10px;
+      background: url('../img/icons/modal-close.png') center center/auto no-repeat;
+      position: absolute;
+      cursor: pointer;
+    }
+    &-table {
+      margin-bottom: 20px;
+      &-header {
+        .modal-attach-table-row {
+          border: none;
+        }
+        .modal-attach-table__cell {
+          background: #BDBBBC;
+          padding: 5px 20px;
+          border: none;
+        }
+        .modal-attach-table__text {
+          font-weight: 500;
+          font-size: 16px;
+          color: #302E2C;
+          overflow: hidden;
+        }
+      }
+      &-row {
+        display: flex;
+      }
+      &__cell {
+        overflow: hidden;
+        padding: 10px 20px;
+        flex: 1;
+        border-right: 1px solid #BDBBBC;
+        border-bottom: 1px solid #BDBBBC;
+        &:first-child {
+          border-left: 1px solid #BDBBBC;
+        }
+      }
+      &__text {
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &-checkbox {
+        cursor: pointer;
+        display: flex;
+        user-select: none;
+        input {
+          display: none;
+        }
+        span {
+          margin-right: 10px;
+          min-width: 16px;
+          height: 16px;
+          border: 1px solid #BDBBBC;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            opacity: 0;
+            background: #EE732C;
+            border-radius: 3px;
+            transition: opacity .2s ease-in-out;
+          }
+        }
+        input:checked + span:before {
+          opacity: 1;
+        }
+        &__text {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 16px;
+          text-decoration-line: underline;
+          color: #EE732C;
+        }
+      }
+    }
+    &__clear-choises {
+      font-size: 16px;
+      color: #302E2C;
+      display: flex;
+      &-wrap {
+        display: none;
+      }
+      &__text {
+        position: relative;
+        cursor: pointer;
+        transition: color .1s ease-in-out;
+        &:before {
+          content: '';
+          width: 100%;
+          border-top: 1px dashed #302E2C;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          transition: border .1s ease-in-out;
+        }
+        &:hover {
+          color: #EE732C;
+          // .modal-attach__clear-choises span:before {
+          //   border-color: #EE732C !important;
+          //   display: none;
+          // }
+        }
+        &:hover:before {
+          border-color: #EE732C !important;
+        }
+      }
+    }
+    &-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    &__btn {
+      width: 160px;
+      max-width: 100%;
+      height: 40px;
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      color: #FFFFFF;
+      &--download {
+        margin-right: 30px;
+        background: #EE732C;
+      }
+      &--cancel {
+        background: #302E2C;
+      }
+    }
+  }
+}
+.lock {
+  position: relative;
+  overflow: hidden;
+}

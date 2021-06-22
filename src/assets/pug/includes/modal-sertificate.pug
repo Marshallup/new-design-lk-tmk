@@ -1,0 +1,44 @@
+.modal-wrapper
+  .modal-overlay
+    .modal-inner
+      .modal-attach
+        .modal-attach__close
+          span
+        .modal-attach__title Приложения СК №1785_2
+        .modal-attach-table
+          .modal-attach-table-header
+            .modal-attach-table-row
+              .modal-attach-table__cell
+                .modal-attach-table__text Вид документа Вид документа Вид документа
+              .modal-attach-table__cell
+                .modal-attach-table__text Имя файла
+              .modal-attach-table__cell
+                .modal-attach-table__text Размер файла
+          .modal-attach-table-body
+            .modal-attach-table-row
+              .modal-attach-table__cell
+                label.modal-attach-table-checkbox
+                  input(type="checkbox")
+                  span
+                  .modal-attach-table-checkbox__text Реестр
+              .modal-attach-table__cell
+                .modal-attach-table__text filename1234.pdf
+              .modal-attach-table__cell
+                .modal-attach-table__text 10 ГБ
+            .modal-attach-table-row
+              .modal-attach-table__cell
+                label.modal-attach-table-checkbox
+                  input(type="checkbox")
+                  span
+                  .modal-attach-table-checkbox__text Приложение
+              .modal-attach-table__cell
+                .modal-attach-table__text filename1234.pdf
+              .modal-attach-table__cell
+                .modal-attach-table__text 10 ГБ
+        .modal-attach__clear-choises-wrap
+          .modal-attach__clear-choises 
+            span.modal-attach__clear-choises__text Снять выделение
+        .modal-attach-btns
+          button(data-text-orig="Скачать" data-text-check="Скачать выделенные").modal-attach__btn.modal-attach__btn--download Скачать
+          button.modal-attach__btn.modal-attach__btn--cancel Отмена
+        

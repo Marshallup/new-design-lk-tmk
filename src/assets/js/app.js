@@ -130,7 +130,7 @@ var table = new Tabulator("#sertificates-table", {
       return '<label class="check-factory"><div class="check-factory-checkbox"><input type="checkbox"/><span></span></div><div class="check-factory__title">' + cell.getValue() + '</div></label>'
   }},
     {title:"№ СК", field:"age", hozAlign:"left", formatter:function(cell, formatterParams, onRendered){
-      return '<a class="table__link" href="#">' + cell.getValue() +'</a>';
+      return '<a href="#" class="table__link" href="#">' + cell.getValue() +'</a>';
   }},
     {title:"Дата СК", field:"col"},
     {title:"№ трансп. ср-ва", field:"dob", sorter:"date", hozAlign:"center"},
@@ -153,10 +153,57 @@ var table = new Tabulator("#sertificates-table", {
       return template_link;
   }},
   ],
-  // rowClick:function(e, row){ //trigger an alert message when the row is clicked
-  //   alert("Row " + row.getData().id + " Clicked!!!!");
-  // },
+  pageLoaded: function(pageno) {
+    console.log('pageLoad');
+    initEventModal();
+  },
 });
 $('#table-count').on('change', function() {
   table.setPageSize($(this).val());
+});
+
+function initEventModal() {
+  // console.log($('.table__attach'))
+  $('.table__attach').click(function() {
+    $('body, html').addClass('lock');
+    $('.modal-wrapper').fadeIn(300)
+  });
+}
+
+$('.modal-attach__close').click(function() {
+  $('.modal-wrapper').fadeOut(300);
+  $('body, html').removeClass('lock');
+});
+
+$('.modal-attach__clear-choises-wrap').click(function() {
+  const $inputsCheck = $('.modal-attach-table-checkbox input');
+  const btnDonwn = $('.modal-attach__btn--download');
+
+  $inputsCheck.prop('checked', false);
+  btnDonwn.text(btnDonwn.data('text-orig'));
+  $(this).hide();
+})
+
+$('.modal-attach-table-checkbox input').on('change', function() {
+  let countCheck = 0;
+  const $clearChecked = $('.modal-attach__clear-choises-wrap');
+  const btnDownload = $('.modal-attach__btn--download');
+  const btnDownloadDataText = btnDownload.data('text-check');
+
+  $('.modal-attach-table-checkbox input').each(function(idx, item) {
+    const $item = $(item);
+
+    if ($item.prop('checked')) {
+      countCheck++;
+    } 
+
+  });
+
+  if (countCheck) {
+    $clearChecked.show();
+    btnDownload.text(btnDownloadDataText);
+  } else {
+    $clearChecked.hide();
+    btnDownload.text(btnDownload.data('text-orig'));
+  }
 })
